@@ -1,0 +1,28 @@
+========================================
+   APPLICATION RUNNING
+========================================
+
+✅ Backend Server: http://localhost:8000
+✅ Frontend Server: http://localhost:3000
+✅ Chrome Browser: Opened
+
+========================================
+
+INSTRUCTIONS:
+
+1. Two terminal windows should be open:
+   - Backend (Python/FastAPI)
+   - Frontend (npm/Vite)
+
+2. Chrome should be open to:
+   http://localhost:3000
+
+3. If the page doesn't load:
+   - Wait 10-20 seconds for servers to start
+   - Refresh browser (F5 or Ctrl+R)
+   - Check terminal windows for errors
+
+4. Keep both terminal windows open while using the app
+
+========================================
+

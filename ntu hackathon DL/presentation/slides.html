@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LearnState AI — 10 Features</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #1a1a2e;
+      color: #eee;
+      overflow: hidden;
+    }
+    .slide {
+      display: none;
+      position: absolute;
+      inset: 0;
+      padding: 48px 56px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .slide.active { display: flex; }
+    .slide.title-slide {
+      background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+      text-align: center;
+    }
+    .slide.title-slide h1 { font-size: 2.2rem; margin: 0 0 12px; color: #e94560; }
+    .slide.title-slide p  { font-size: 1.2rem; color: #a0aec0; margin: 0; }
+    .slide h2 {
+      font-size: 1.5rem;
+      margin: 0 0 20px;
+      color: #e94560;
+      align-self: flex-start;
+    }
+    .slide .screenshot {
+      flex: 1;
+      width: 100%;
+      max-height: 65vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0f0f1a;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #2d2d44;
+    }
+    .slide .screenshot img {
+      max-width: 100%;
+      max-height: 65vh;
+      object-fit: contain;
+    }
+    .slide .screenshot.placeholder {
+      color: #4a5568;
+      font-size: 1rem;
+      padding: 24px;
+      text-align: center;
+    }
+    .slide .caption {
+      margin-top: 16px;
+      font-size: 0.95rem;
+      color: #a0aec0;
+      align-self: flex-start;
+    }
+    .nav-hint {
+      position: fixed;
+      bottom: 16px;
+      right: 24px;
+      font-size: 0.8rem;
+      color: #4a5568;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide title-slide active">
+    <h1>AI-Powered Learning Analytics</h1>
+    <p>10 key features — with screenshots</p>
+  </div>
+
+  <div class="slide" data-title="Feature 1 — Student & Interaction Management">
+    <h2>1. Student & Interaction Management</h2>
+    <div class="screenshot">
+      <img src="screenshots/feature1.png" alt="Student selector and interaction form" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span class="placeholder" style="display:none;">Add screenshot: Student selector + Record interaction form → save as screenshots/feature1.png</span>
+    </div>
+    <p class="caption">Create students and record every learning activity (study, quiz, assignment) with topic, duration, score, engagement.</p>
+  </div>
+
+  <div class="slide" data-title="Feature 2 — Learning State Modeling">
+    <h2>2. Learning State Modeling</h2>
+    <div class="screenshot">
+      <img src="screenshots/feature2.png" alt="Learning state card" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span class="placeholder" style="display:none;">Add screenshot: Learning State card (proficiency, engagement, velocity) → screenshots/feature2.png</span>
+    </div>
+    <p class="caption">Proficiency, engagement, learning velocity, consistency, and risk level—updated automatically after each interaction.</p>
+  </div>
+
+  <div class="slide" data-title="Feature 3 — BKT">
+    <h2>3. Bayesian Knowledge Tracing (BKT)</h2>
+    <div class="screenshot">
+      <img src="screenshots/feature3.png" alt="Topic proficiencies / BKT" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span class="placeholder" style="display:none;">Add screenshot: Topic proficiencies chart or API /students/1/state → screenshots/feature3.png</span>
+    </div>
+    <p class="caption">Probabilistic mastery per topic and forgetting over time—recommendations are evidence-based.</p>
+  </div>
+
+  <div class="slide" data-title="Feature 4 — Explainable Recommendations">
+    <h2>4. Personalized, Explainable Recommendations</h2>
+    <div class="screenshot">
+      <img src="screenshots/feature4.png" alt="Recommendations panel" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span class="placeholder" style="display:none;">Add screenshot: Recommendations panel with one card expanded → screenshots/feature4.png</span>
+    </div>
+    <p class="caption">Reasoning, supporting data, and action items—Study, Practice, Review, Break, or Accelerate.</p>
+  </div>
+
+  <div class="slide" data-title="Feature 5 — Mistake Intelligence">
+    <h2>5. Mistake Intelligence</h2>
+    <div class="screenshot">
+      <img src="screenshots/feature5.png" alt="Mistake analysis" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span class="placeholder" style="display:none;">Add screenshot: GET /students/1/mistake-analysis → screenshots/feature5.png</span>
+    </div>
+    <p class="caption">Errors classified as conceptual gap, careless, speed issue, or fragile mastery—actionable insights.</p>
+  </div>
+
+  <div class="slide" data-title="Feature 6 — Study ROI Optimizer">
+    <h2>6. Study ROI Optimizer</h2>
+    <div class="screenshot">
+      <img src="screenshots/feature6.png" alt="Study plan" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span class="placeholder" style="display:none;">Add screenshot: GET /students/1/study-plan/60 → screenshots/feature6.png</span>
+    </div>
+    <p class="caption">Time-budgeted study plans (e.g. 60 min) that maximize learning gain per minute and predict exam improvement.</p>
+  </div>
+
+  <div class="slide" data-title="Feature 7 — Digital Learning Twin">
+    <h2>7. Digital Learning Twin</h2>
+    <div class="screenshot">
+      <img src="screenshots/feature7.png" alt="Learning Twin prediction" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span class="placeholder" style="display:none;">Add screenshot: GET .../learning-twin/predict/Mathematics?days=7 → screenshots/feature7.png</span>
+    </div>
+    <p class="caption">Retention decay prediction and what-if scenarios—e.g. “If you don’t study for 7 days, mastery drops to X.”</p>
+  </div>
+
+  <div class="slide" data-title="Feature 8 — Burnout & Inactivity">
+    <h2>8. Burnout & Inactivity Detection</h2>
+    <div class="screenshot">
+      <img src="screenshots/feature8.png" alt="Burnout / break recommendation" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span class="placeholder" style="display:none;">Add screenshot: Break or inactivity recommendation card → screenshots/feature8.png</span>
+    </div>
+    <p class="caption">Detects burnout signals and long inactivity—surfaces break or re-engagement recommendations.</p>
+  </div>
+
+  <div class="slide" data-title="Feature 9 — Dashboard">
+    <h2>9. One Dashboard, Full Picture</h2>
+    <div class="screenshot">
+      <img src="screenshots/feature9.png" alt="Full dashboard" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span class="placeholder" style="display:none;">Add screenshot: Full dashboard (state + charts + recommendations) → screenshots/feature9.png</span>
+    </div>
+    <p class="caption">One screen: learning state, analytics charts, recommendations, and form to log activity—single dashboard API.</p>
+  </div>
+
+  <div class="slide" data-title="Feature 10 — API">
+    <h2>10. API-First & Extensible</h2>
+    <div class="screenshot">
+      <img src="screenshots/feature10.png" alt="API docs" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span class="placeholder" style="display:none;">Add screenshot: http://localhost:8000/docs (Swagger) → screenshots/feature10.png</span>
+    </div>
+    <p class="caption">REST APIs for all features—students, interactions, state, recommendations, study plans, Learning Twin, mistake analysis.</p>
+  </div>
+
+  <div class="slide title-slide">
+    <h1>Thank you</h1>
+    <p>AI-Powered Learning Analytics — 10 Features</p>
+  </div>
+
+  <div class="nav-hint">← → or click to navigate</div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let idx = 0;
+    function show(i) {
+      idx = (i + slides.length) % slides.length;
+      slides.forEach((s, k) => s.classList.toggle('active', k === idx));
+      document.title = slides[idx].dataset.title || 'LearnState AI — 10 Features';
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); show(idx + 1); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); show(idx - 1); }
+    });
+    slides.forEach((s, i) => s.addEventListener('click', () => show(idx + 1)));
+    show(0);
+  </script>
+</body>
+</html>

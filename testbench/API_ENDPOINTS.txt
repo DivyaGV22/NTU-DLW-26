@@ -1,0 +1,20 @@
+# Learning Analytics API — Main endpoints (for testbench reference)
+# Base URL: http://localhost:8000
+# Interactive docs: http://localhost:8000/docs
+
+GET  /                          # Health / info
+GET  /students                  # List all students
+POST /students                  # Create student (JSON: name, email)
+GET  /students/{id}             # Get one student
+GET  /students/{id}/interactions # List interactions for student
+POST /students/{id}/interactions # Create interaction (JSON: interaction_type, topic, duration_minutes, score?, difficulty_level?, engagement_score?)
+GET  /students/{id}/state        # Get current learning state
+GET  /students/{id}/recommendations # Get recommendations
+GET  /students/{id}/dashboard    # Dashboard data (state + recommendations + recent interactions)
+PUT  /recommendations/{id}/status?status=viewed|completed  # Update recommendation status
+
+Sample create student (JSON body):
+  {"name": "Test Student", "email": "test@example.com"}
+
+Sample create interaction (JSON body):
+  {"interaction_type": "study", "topic": "Mathematics", "duration_minutes": 45, "score": null, "difficulty_level": "medium", "engagement_score": 0.8}
