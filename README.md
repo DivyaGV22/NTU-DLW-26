@@ -1,6 +1,6 @@
 # NTU Hackathon Submission — AI-Powered Learning Analytics & Recommendation System
 
-**Repository:** Please ensure this repository is **public** so judges can access it.
+
 
 This repository contains the complete source code for an intelligent learning analytics system that models students' evolving learning state and provides personalized, actionable recommendations.
 
